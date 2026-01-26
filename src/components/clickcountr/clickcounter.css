@@ -1,0 +1,136 @@
+/* ---------- Global Reset ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ---------- Background ---------- */
+.appContainer {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 20px;
+}
+
+/* ---------- Card ---------- */
+.counterCard {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Heading ---------- */
+.mainHeading {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 25px;
+}
+
+/* ---------- Counter Circle ---------- */
+.countCircle {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    animation: pop 0.3s ease-in-out;
+}
+
+.countNumber {
+    font-size: 42px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* ---------- Paragraph ---------- */
+.paragraphTag {
+    font-size: 16px;
+    color: #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* ---------- Buttons ---------- */
+.buttonGroup {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    border: none;
+    border-radius: 12px;
+    padding: 14px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Primary Button */
+.primaryBtn {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    color: #000;
+}
+
+.primaryBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(67, 233, 123, 0.5);
+}
+
+/* Secondary Button */
+.secondaryBtn {
+    background: linear-gradient(135deg, #ff6a6a, #ff4757);
+    color: #fff;
+}
+
+.secondaryBtn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 71, 87, 0.5);
+}
+
+/* ---------- Animation ---------- */
+@keyframes pop {
+    0% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ---------- Tablet ---------- */
+@media (min-width: 768px) {
+    .mainHeading {
+        font-size: 36px;
+    }
+
+    .countCircle {
+        width: 140px;
+        height: 140px;
+    }
+
+    .countNumber {
+        font-size: 48px;
+    }
+}
+
+/* ---------- Desktop ---------- */
+@media (min-width: 1024px) {
+    .counterCard {
+        padding: 50px;
+    }
+}
